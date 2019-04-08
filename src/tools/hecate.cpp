@@ -15,7 +15,7 @@ using namespace cv;
 
 int main( int argc, char** argv )
 {
-  hecate_copyright();
+  //hecate_copyright();
   if( argc<3 )
     hecate_usage();
   
