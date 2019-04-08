@@ -85,6 +85,12 @@ vector<hecate::ShotRange> VideoParser::parse_video(const string& in_video,
   if( _display )
     play_video_filtered( in_video, 2, 360 );
   
+  if (_nfrm_total>0 && _v_shot_ranges.empty()) {
+	hecate::ShotRange rng0(0, 0);
+	rng0.v_idx.push_back(0);
+    _v_shot_ranges.push_back(rng0);
+  }
+  
   // Produce result
   return _v_shot_ranges;
 }
