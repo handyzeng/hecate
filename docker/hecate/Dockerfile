@@ -17,11 +17,9 @@ RUN mkdir -p /opt && \
     wget https://github.com/opencv/opencv/archive/${OPENCV_VERSION}.tar.gz && \
     tar -xvzf ${OPENCV_VERSION}.tar.gz && \
     rm -rf ${OPENCV_VERSION}.tar.gz && \
-
-    wget https://github.com/opencv/opencv_contrib/archive/${OPENCV_VERSION}.zip && \
+    wget https://github.com/opencv/opencv_contrib/archive/${OPENCV_VERSION}.tar.gz && \
     tar -xvzf ${OPENCV_VERSION}.tar.gz && \
     rm -rf ${OPENCV_VERSION}.tar.gz && \
-
     mkdir -p /opt/opencv-${OPENCV_VERSION}/build && \
     cd /opt/opencv-${OPENCV_VERSION}/build && \
     cmake \
