@@ -23,10 +23,8 @@ RUN mkdir -p /opt && \
     mkdir -p /opt/opencv-${OPENCV_VERSION}/build && \
     cd /opt/opencv-${OPENCV_VERSION}/build && \
     cmake \
-      -D CMAKE_FIND_LIBRARY_SUFFIXES=.a \
       -D CMAKE_BUILD_TYPE=RELEASE \
       -D CMAKE_INSTALL_PREFIX=/usr/local \
-      -D BUILD_SHARED_LIBS=OFF \
       -D WITH_CUDA=OFF \
       -D BUILD_TESTS=OFF \
       -D BUILD_PERF_TESTS=OFF \
