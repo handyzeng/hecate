@@ -1,7 +1,8 @@
 # Use Ubuntu:16.04 image as parent image
 FROM ubuntu:16.04
 
-WORKDIR /
+ADD . /code
+WORKDIR /code
 
 ENV OPENCV_VERSION=3.4.2
 
@@ -43,10 +44,15 @@ RUN mkdir -p /opt && \
       rm -rf /opt/opencv-${OPENCV_VERSION} && \
       rm -rf /opt/opencv_contrib-${OPENCV_VERSION}
 
-RUN cd /opt && \
-    git clone https://github.com/handyzeng/hecate.git && \
-    cd hecate && \
-    make && \
-    make distribute
+#RUN cd /opt && \
+#    git clone https://github.com/handyzeng/hecate.git && \
+#    cd hecate && \
+#    make && \
+#    make distribute
 
+RUN cd /code && \
+      make && \
+      make distribute
+
+CMD ["run.sh"]
 
