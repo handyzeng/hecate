@@ -1,0 +1,7 @@
+version: '2'
+services:
+  hecate:
+    build: ./hecate
+    command: /code/run.sh
+    volumes:
+      - .:/code
