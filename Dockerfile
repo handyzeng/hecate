@@ -1,9 +1,7 @@
 # Use Ubuntu:16.04 image as parent image
 FROM ubuntu:16.04
 
-# Modify apt-get to aliyun mirror
 WORKDIR /
-#RUN sed -i 's/archive.ubuntu/mirrors.aliyun/g' /etc/apt/sources.list
 
 # Install necessary library
 RUN apt-get update
